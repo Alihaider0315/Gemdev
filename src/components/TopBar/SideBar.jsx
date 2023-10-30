@@ -341,7 +341,22 @@ export default function SideBar() {
                         </a>
                       </Link>
                     </li>
-
+                    <li className={styles.li}>
+                      <Link href="/winners" legacyBehavior>
+                        <a
+                          onClick={() => {
+                            pathname === "/winners"
+                              ? setLoder(false)
+                              : setLoder(true);
+                          }}
+                          className={
+                            pathname === "/winners" ? styles.activeOption : ""
+                          }
+                        >
+                          WINNERS
+                        </a>
+                      </Link>
+                    </li>
                     <li className={styles.li}>
                       <Link href="/talentbord" legacyBehavior>
                         <a

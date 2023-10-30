@@ -97,7 +97,7 @@ const ForgetPasswordStep2 = (props) => {
                 className={styles.forget_password_form}
               >
                 <div className={styles.forget_password_form_sec1}>
-                  <h1>Reset Your Password </h1>
+                  <h2 className="yellow">Reset Your Password </h2>
                   <p>Create New Password</p>
                 </div>
                 <div className={styles.forget_password_form_sec2}>

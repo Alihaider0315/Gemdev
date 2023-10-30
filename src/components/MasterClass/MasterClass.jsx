@@ -113,11 +113,11 @@ export default function MasterClass({ formattedDate }) {
                               }}
                             />
                           </div>
-                          <div className={styles.date}>
+                          {/* <div className={styles.date}>
                             <span className="yellow">
                               {moment(item.created_at).format("MMMM DD, YYYY")}
                             </span>
-                          </div>
+                          </div> */}
                         </div>
                       </Link>
                     </SwiperSlide>

@@ -25,7 +25,7 @@ export default function ThanksBox() {
               loading="lazy"
             />
           </Link>
-          <h1>Congratulations</h1>
+          <h2 className="yellow">Congratulations</h2>
           <div className={styles.done_sec1}></div>
           <div className={styles.done_sec2}>
             <p>

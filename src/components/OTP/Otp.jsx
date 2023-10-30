@@ -54,7 +54,7 @@ const Otp = (props) => {
   };
   const resentOtpVerification = () => {
     // window.location.reload();
-    setTimeLeft(120);
+    setTimeLeft(60);
     setTimerActive(true);
     axios
       .post(
@@ -68,8 +68,7 @@ const Otp = (props) => {
       .then(function (response) {
         // console.log("response for resent verfication", response.data.message);
         if (response?.status === true) {
-          // console.log("checking ", response.data.message);
-          // toast.success(response?.data?.message);
+          toast.success(response?.data?.message);
           // alert(response?.data?.message);
           // alert(response?.message);
           // setIsOtp(false);
@@ -82,7 +81,7 @@ const Otp = (props) => {
         // alert(error?.message);
       });
   };
-  const [timeLeft, setTimeLeft] = useState(120);
+  const [timeLeft, setTimeLeft] = useState(60);
   const [timerActive, setTimerActive] = useState(true);
   useEffect(() => {
     if (!timerActive || !timeLeft) return;
@@ -92,7 +91,7 @@ const Otp = (props) => {
     // Save intervalId to clear the interval when the component re-renders
     const intervalId = setInterval(() => {
       setTimeLeft(timeLeft - 1);
-    }, 2000);
+    }, 1000);
 
     // Clear interval on re-render to avoid memory leaks
     return () => clearInterval(intervalId);

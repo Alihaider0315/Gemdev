@@ -282,7 +282,7 @@ const GemKidsSignup = () => {
           autoClose: 5000,
         });
         setIsLoading(false);
-        return;
+        return; // Phone number already exists, stop the submission
       }
     } catch (error) {
       console.error(error);

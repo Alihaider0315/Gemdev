@@ -74,7 +74,7 @@ const ForgetPasswordStep1 = ({}) => {
                 className={styles.forget_password_form}
               >
                 <div className={styles.forget_password_form_sec1}>
-                  <h1>Forget Your Password?</h1>
+                  <h2 className="yellow">Forget Your Password?</h2>
                   <p>Confirm your email and we will send you instruction.</p>
                 </div>
                 <div className={styles.forget_password_form_sec2}>

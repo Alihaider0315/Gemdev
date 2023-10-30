@@ -475,6 +475,25 @@ const NavTop = ({ loder, setLoder }) => {
                       </a>
                     </Link>
 
+                    <Link
+                      href="/winners"
+                      legacyBehavior
+                      // href={user ? "submitnow" : "login"}
+                    >
+                      <a
+                        onClick={() => {
+                          pathname === "/winners"
+                            ? setLoder(false)
+                            : setLoder(true);
+                        }}
+                        className={
+                          pathname === "/winners" ? styles.activeOption : ""
+                        }
+                      >
+                        WINNERS
+                      </a>
+                    </Link>
+
                     <Link href="/talentbord" legacyBehavior>
                       <a
                         onClick={() => {

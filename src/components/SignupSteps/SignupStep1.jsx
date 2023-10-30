@@ -45,6 +45,12 @@ const SignupStep1 = ({}) => {
       setCode(code);
     }
   }, [router.query]);
+
+  useEffect(() => {
+    if (code) {
+      setPromoCode(code);
+    }
+  }, [code]);
   // useEffect(() => {}, [myValue]);
 
   const dispatch = useDispatch();
@@ -543,6 +549,7 @@ const SignupStep1 = ({}) => {
                     name="promo_code"
                     value={promo_code}
                     onChange={(e) => setPromoCode(e.target.value)}
+                    disabled={code ? true : false} // Disable the input field if the code has a value
                   />
                 </label>
 

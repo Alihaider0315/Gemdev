@@ -37,10 +37,10 @@ const OtpForget = (props) => {
         }
       )
       .then(function (response) {
-        // console.log("response", response);
         if (response?.data?.status === true) {
-          setShowStep3(true);
           toast.success(response?.data?.message);
+
+          setShowStep3(true);
           // console.log(userId, "userid for otp froget-1");
         } else {
           toast.error(response?.data?.message, { autoClose: 5000 });
@@ -55,7 +55,7 @@ const OtpForget = (props) => {
 
   const resentOtpVerification = () => {
     // window.location.reload();
-    setTimeLeft(120);
+    setTimeLeft(60);
     setTimerActive(true);
     axios
       .post(
@@ -67,9 +67,8 @@ const OtpForget = (props) => {
         }
       )
       .then(function (response) {
-        // console.log("response", response);
-        if (response?.status === true) {
-          toast(response?.data?.message);
+        if (response?.data?.status === true) {
+          toast.success(response?.data?.message);
         }
       })
       .catch(function (error) {
@@ -78,7 +77,7 @@ const OtpForget = (props) => {
       });
   };
 
-  const [timeLeft, setTimeLeft] = useState(120);
+  const [timeLeft, setTimeLeft] = useState(60);
   const [timerActive, setTimerActive] = useState(true);
 
   useEffect(() => {
@@ -88,7 +87,7 @@ const OtpForget = (props) => {
     // Save intervalId to clear the interval when the component re-renders
     const intervalId = setInterval(() => {
       setTimeLeft(timeLeft - 1);
-    }, 2000);
+    }, 1000);
 
     // Clear interval on re-render to avoid memory leaks
     return () => clearInterval(intervalId);

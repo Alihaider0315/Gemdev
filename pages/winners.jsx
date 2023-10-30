@@ -18,7 +18,7 @@ import localStorage from "local-storage";
 import { useRouter } from "next/router";
 // import { toast } from "react-toastify";
 import { toast, ToastContainer } from "react-toastify";
-
+import comeingsoon from "../src/asset/coming soon/m028t0260_b_coming_soon_26feb23.jpg";
 export default function PrizesAndWinners() {
   const [banner, setBanner] = useState();
   const [loder, setLoder] = useState(true);
@@ -105,6 +105,8 @@ export default function PrizesAndWinners() {
 
       if (response?.data?.status === true) {
         setAllCompetition(response?.data?.response?.data);
+        console.log(response?.data?.response?.data, "fff");
+
         setWinners(response?.data?.response?.data[0]?.competition_winner);
       } else {
         // Handle the case where the status is not active
@@ -171,65 +173,77 @@ export default function PrizesAndWinners() {
       {/* <div className={styles.prize_winners_baner_sec1}>
         <h1>Prizes</h1>
       </div> */}
-
-      <div className={styles.sub_parent}>
-        {allcompetition?.map((competitions) => (
-          <div
-            className={styles.prize_winners_baner_sec2}
-            key={competitions?.id}
-          >
-            <h2 className="yellow">{competitions?.title}</h2>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: competitions?.short_description,
-              }}
-            ></p>
-            {/* {console.log(competitions?.competition_prizes, "testing ")} */}
-            <div className={styles.prize_winners_baner_sec3}>
-              {competitions?.competition_winner?.map((winners) => (
-                <div
-                  className={styles.prize_winner_card2}
-                  style={{
-                    backgroundImage: `url(${winners?.winner_image})`,
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    backgroundColor: "#474747",
-                  }}
-                  key={winners.id}
-                >
-                  <div className={styles.content}>
-                    <div
-                      className={styles.prize_winner_card2_icon1}
-                      style={{
-                        backgroundImage: `url(${winners?.prize_icon})`,
-                      }}
-                    ></div>
-                    <h4>{winners?.winner_name}</h4>
-                    <p
-                      className="small_heading_yellow"
-                      dangerouslySetInnerHTML={{
-                        __html: winners?.winner_position,
-                      }}
-                    >
-                      {/* 1st Position */}
-                    </p>
-
-                    <p
-                      className="small_heading"
-                      dangerouslySetInnerHTML={{
-                        __html: winners?.description,
-                      }}
-                    ></p>
-                  </div>
-                </div>
-              ))}
-            </div>
+      {allcompetition.length === 0 ? (
+        <div className={styles.sub_parent}>
+          <div className={styles.prize_winners_baner_sec3}>
+            <h3>To be announced soon</h3>
           </div>
-        ))}
+        </div>
+      ) : (
+        <div className={styles.sub_parent}>
+          {allcompetition?.map((competitions) => (
+            <div
+              className={styles.prize_winners_baner_sec2}
+              key={competitions?.id}
+            >
+              <h2 className="yellow">{competitions?.title}</h2>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: competitions?.short_description,
+                }}
+              ></p>
+              {/* {console.log(competitions?.competition_prizes, "testing ")} */}
+              {competitions?.competition_winner.length === 0 ? (
+                <div className={styles.prize_winners_baner_sec7}>
+                  <h4> To be announced soon</h4>
+                </div>
+              ) : (
+                <div className={styles.prize_winners_baner_sec3}>
+                  {competitions?.competition_winner?.map((winners) => (
+                    <div
+                      className={styles.prize_winner_card2}
+                      style={{
+                        backgroundImage: `url(${winners?.winner_image})`,
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        backgroundColor: "#474747",
+                      }}
+                      key={winners.id}
+                    >
+                      <div className={styles.content}>
+                        <div
+                          className={styles.prize_winner_card2_icon1}
+                          style={{
+                            backgroundImage: `url(${winners?.prize_icon})`,
+                          }}
+                        ></div>
+                        <h4>{winners?.winner_name}</h4>
+                        <p
+                          className="small_heading_yellow"
+                          dangerouslySetInnerHTML={{
+                            __html: winners?.winner_position,
+                          }}
+                        >
+                          {/* 1st Position */}
+                        </p>
 
-        {/* 1st Card */}
-        {/* {prizes?.map((prize) => (
+                        <p
+                          className="small_heading"
+                          dangerouslySetInnerHTML={{
+                            __html: winners?.description,
+                          }}
+                        ></p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+
+          {/* 1st Card */}
+          {/* {prizes?.map((prize) => (
           <div
             className={styles.prize_winner_card}
             style={{ backgroundImage: `url(${prize?.prize_image})` }}
@@ -260,8 +274,8 @@ export default function PrizesAndWinners() {
           </div>
         ))} */}
 
-        {/* Second Card */}
-        {/* <div className={styles.prize_winner_card}>
+          {/* Second Card */}
+          {/* <div className={styles.prize_winner_card}>
           <div className={styles.prize_winner_card_sec2}>
             <div className={styles.prize_winner_card2_icon1}></div>
           </div>
@@ -275,8 +289,8 @@ export default function PrizesAndWinners() {
             <p className={styles.prize_winner_card_prizing}>TBD</p>
           </div>
         </div> */}
-        {/* Thrid Card */}
-        {/* <div className={styles.prize_winner_card}>
+          {/* Thrid Card */}
+          {/* <div className={styles.prize_winner_card}>
           <div className={styles.prize_winner_card_sec2}>
             <div className={styles.prize_winner_card2_icon1}></div>
           </div>
@@ -290,8 +304,10 @@ export default function PrizesAndWinners() {
             <p className={styles.prize_winner_card_prizing}>TBD</p>
           </div>
         </div> */}
-        <ToastContainer className="tost" />
-      </div>
+          <ToastContainer className="tost" />
+        </div>
+      )}
+
       {/* Checking Start */}
       {/* <div className={styles.winners_sec1}>
         <h1>Winners</h1>
