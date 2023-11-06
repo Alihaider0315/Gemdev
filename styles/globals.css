@@ -64,7 +64,7 @@ body {
   color: rgb(var(--foreground-rgb));
   padding: 0 !important;
   background-color: #000;
-  background-image: url(../src/asset/mainBg.png);
+  /* background-image: url(../src/asset/mainBg.png); */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
