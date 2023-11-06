@@ -256,8 +256,9 @@ input {
 }
 .InnerBaner_carousel1__d8X1b :nth-child(2) {
   right: 0 !important;
-  bottom: 0 !important;
+  bottom: 40px !important;
   gap: 10px;
+  top: 93% !important;
 
 }
 
