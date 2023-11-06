@@ -227,6 +227,17 @@ input {
   height: auto !important;
   object-fit: cover;
 }
+.InnerBaner_img__di0dy {
+  height: auto !important;
+  width: 100%;
+}
+.TalentsBaner_carousel_card__WU_DC {
+  height: 350px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 .yellow {
   color: #fcc100;
 }
