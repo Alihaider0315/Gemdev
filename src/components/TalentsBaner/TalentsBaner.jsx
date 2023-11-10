@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 export default function TalentsBnaer() {
   const [talents, setTalents] = useState([]);
   const [talentsLoader, setTalentsLoader] = useState(false);
+  console.log(talentsLoader , talents)
 
   // Create a ref to hold the Swiper instance
   const swiperRef = useRef(null);
