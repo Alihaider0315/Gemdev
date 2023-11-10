@@ -4,13 +4,11 @@ import Link from "next/link";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 export default function TalentsBnaer() {
   const [talents, setTalents] = useState([]);
   const [talentsLoader, setTalentsLoader] = useState(false);
+  const [flags, setFlags] = useState({});
 
   // Create a ref to hold the Swiper instance
   const swiperRef = useRef(null);
@@ -21,6 +19,23 @@ export default function TalentsBnaer() {
         process.env.NEXT_PUBLIC_BASE_URL + "/api/talents"
       );
       setTalents(response?.data?.response?.data);
+
+      const countryFlags = {};
+
+      // Fetch flags for each country
+      for (const talent of response?.data?.response?.data) {
+        const countryName = talent.country;
+
+        if (!countryFlags[countryName]) {
+          const flagResponse = await axios.get(
+            `https://restcountries.com/v3.1/name/${countryName}`
+          );
+          const flag = flagResponse?.data[0]?.flags?.svg;
+          countryFlags[countryName] = flag;
+        }
+      }
+
+      setFlags(countryFlags);
       setTalentsLoader(true);
     } catch (error) {
       console.log(error);
@@ -61,7 +76,7 @@ export default function TalentsBnaer() {
         {talentsLoader && (
           <div className={styles.carousel}>
             <Swiper
-              ref={swiperRef} // Assign the swiperRef to the Swiper component
+              ref={swiperRef}
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               slidesPerView={5}
               spaceBetween={24}
@@ -80,7 +95,6 @@ export default function TalentsBnaer() {
                 },
               }}
               pagination={{ clickable: true }}
-              // loop={true}
             >
               {talents?.slice(0, 15).map((item, index) => (
                 <SwiperSlide key={index}>
@@ -90,20 +104,29 @@ export default function TalentsBnaer() {
                       src={item?.photoURL}
                       alt="talents slide_image"
                     />
-                    <h3 className="name_heading">{item?.profession_id}</h3>
                     <h3 className="name_heading">{item?.name}</h3>
+                    <h3 className="name_heading">{item?.country}</h3>
+                    {flags[item?.country] && (
+                      <img
+                        src={flags[item?.country]}
+                        alt={`Flag of ${item?.country}`}
+                        className={styles.flag}
+                      />
+                    )}
                     {item?.gender === 'Male' && (
-                      <h3 className="name_heading">ACTOR</h3>
+                      <h3 className="name_heading">Actor</h3>
                     )}
                     {item?.gender === 'Female' && (
-                      <h3 className="name_heading">ACTRESS</h3>
+                      <h3 className="name_heading">Actress</h3>
                     )}
-      
                   </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
-         
+            <div className={styles.navigationButtons}>
+              <button onClick={slidePrev}>Previous</button>
+              <button onClick={slideNext}>Next</button>
+            </div>
           </div>
         )}
       </div>
