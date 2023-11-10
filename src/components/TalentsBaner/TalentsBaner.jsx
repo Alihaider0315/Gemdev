@@ -92,7 +92,13 @@ export default function TalentsBnaer() {
                     />
                     <h3 className="name_heading">{item?.profession_id}</h3>
                     <h3 className="name_heading">{item?.name}</h3>
-                    <h3 className="name_heading">{item?.country}</h3>
+                    {item?.gender === 'Male' && (
+                      <h3 className="name_heading">ACTOR</h3>
+                    )}
+                    {item?.gender === 'Female' && (
+                      <h3 className="name_heading">ACTRESS</h3>
+                    )}
+      
                   </Link>
                 </SwiperSlide>
               ))}
