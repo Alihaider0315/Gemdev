@@ -58,11 +58,7 @@ export default function TalentsBnaer() {
             <Link href="/talent">Talent</Link>
           </h2>
 
-          <div className={styles.btn_parent}>
-            <div className="swiper-button-prev" onClick={slidePrev}></div>
-            {/* Custom next button */}
-            <div className="swiper-button-next" onClick={slideNext}></div>
-          </div>
+          
         </div>
         {talentsLoader && (
           <div className={styles.carousel}>
