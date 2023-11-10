@@ -325,6 +325,18 @@ input {
   background: #fcc100 !important;
 }
 
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 0;
+  top: 95% !important;
+  left: 0;
+  width: 100%;
+}
+.swiper {
+ 
+  height: 60vh !important;
+  
+}
+
 .yellow {
   color: #fcc100;
 }
