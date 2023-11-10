@@ -307,6 +307,13 @@ input {
   overflow: hidden;
   box-shadow: 0 0 10px 3px #f1b001;
 }
+/* Banner Bullets */
+
+.swiper-pagination-bullet {
+
+  background: #fcc100 !important;
+}
+
 .yellow {
   color: #fcc100;
 }
