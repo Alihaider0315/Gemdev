@@ -90,6 +90,7 @@ export default function TalentsBnaer() {
                       src={item?.photoURL}
                       alt="talents slide_image"
                     />
+                    <h3 className="name_heading">{item?.profession}</h3>
                     <h3 className="name_heading">{item?.name}</h3>
                     <h3 className="name_heading">{item?.country}</h3>
                   </Link>
