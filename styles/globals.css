@@ -232,7 +232,7 @@ input {
   width: 100%;
 }
 .TalentsBaner_carousel_card__WU_DC {
-  height: 350px !important;
+  height: auto !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
