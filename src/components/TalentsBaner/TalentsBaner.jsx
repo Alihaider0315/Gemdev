@@ -90,7 +90,7 @@ export default function TalentsBnaer() {
                       src={item?.photoURL}
                       alt="talents slide_image"
                     />
-                    <div>
+                    <br/>
                     <h3 className="name_heading">{item?.country}</h3>
                     <br/>
                     <h3 className="name_heading">{item?.name}</h3>
@@ -101,7 +101,6 @@ export default function TalentsBnaer() {
                     {item?.gender === 'Female' && (
                       <h3 className="name_heading">Actress</h3>
                     )}
-                    </div>
                   </Link>
                 </SwiperSlide>
               ))}
