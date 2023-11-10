@@ -18,9 +18,11 @@ export default function TalentsBnaer() {
   const GetTalent = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/talents"
+        process.env.NEXT_PUBLIC_BASE_URL + "/api/talents",
+        console.log(response)
       );
       setTalents(response?.data?.response?.data);
+      console.log(setTalents);
       setTalentsLoader(true);
     } catch (error) {
       console.log(error);
@@ -97,10 +99,10 @@ export default function TalentsBnaer() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className={styles.navigationButtons}>
+            {/* <div className={styles.navigationButtons}>
               <button onClick={slidePrev}>Previous</button>
               <button onClick={slideNext}>Next</button>
-            </div>
+            </div> */}
           </div>
         )}
       </div>
