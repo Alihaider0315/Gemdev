@@ -27,7 +27,7 @@ export default function Ent() {
   const GetBanner = async () => {
     try {
       await axios
-        .get(process.env.NEXT_PUBLIC_BASE_URL + "/api/landing_page")
+        .get("https://dev8.sidat.digital" + "/api/landing_page")
         .then((response) => {
           setBanner(response.data);
           setSliderSection(response?.data?.slider_section);

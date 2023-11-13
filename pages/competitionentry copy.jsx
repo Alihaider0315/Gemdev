@@ -75,7 +75,7 @@ export default function Dashboard() {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -100,7 +100,7 @@ export default function Dashboard() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=Benefits&s[type]=Landing`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             // "/api/banners?s[page]=user dashboard&s[type]=Landing"
             "/api/banners?/competition entry[type]=Landing"
         )
@@ -124,7 +124,7 @@ export default function Dashboard() {
     axios
       .get(
         // `${baseUrl}/api/competitions`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/competitions",
+        "https://dev8.sidat.digital" + "/api/competitions",
 
         {
           headers: {
@@ -151,7 +151,7 @@ export default function Dashboard() {
     axios
       .get(
         // `${baseUrl}/api/member/registered-competitions?competition_id=${1}`
-        process.env.NEXT_PUBLIC_BASE_URL +
+        "https://dev8.sidat.digital" +
           "/api/member/registered-competitions?competition_id=" +
           1,
 
@@ -176,7 +176,7 @@ export default function Dashboard() {
     axios
       .get(
         // `${baseUrl}/api/member/user-competition/delete?user_competition_id=${id}`
-        process.env.NEXT_PUBLIC_BASE_URL +
+        "https://dev8.sidat.digital" +
           "/api/member/user-competition/delete?user_competition_id=" +
           id,
 
@@ -404,7 +404,7 @@ export default function Dashboard() {
 export async function getServerSideProps() {
   const res2 = await axios.get(
     // `${baseUrl}/api/competitions`
-    process.env.NEXT_PUBLIC_BASE_URL + "/api/competitions"
+    "https://dev8.sidat.digital" + "/api/competitions"
   );
   const data2 = res2?.data?.response?.data.filter(
     (obj) => obj.status === "Active"

@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
         .get(
           // `${baseUrl}/api/banners?s[page]=Partners&s[type]=Landing`
 
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/banners?s[page]=Privacy Policy&s[type]=Landing"
         )
         .then((response) => {
@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
       await axios
         .get(
           // `${baseUrl}/api/page/mission-she`
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/page/privacy-policy"
+          "https://dev8.sidat.digital" + "/api/page/privacy-policy"
         )
         .then((response) => {
           setContent(response?.data?.response);

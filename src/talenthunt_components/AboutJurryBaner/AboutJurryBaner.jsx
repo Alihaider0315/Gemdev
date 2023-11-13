@@ -48,7 +48,7 @@ export default function AboutJurryBaner() {
       await axios
         .get(
           // `${baseUrl}/api/competition-jury?competition_id=${1}`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/competition-jury?competition_id=" +
             1
         )

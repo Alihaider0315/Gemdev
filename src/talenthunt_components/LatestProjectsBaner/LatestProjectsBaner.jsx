@@ -37,7 +37,7 @@ export default function LatestProject() {
       await axios
         .post(
           // `${baseUrl}/api/competition/participants?competition_id=${1}`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             // "/api/competition/participants?competition_id=" +
             // 3
             "/api/competition/participants-all"

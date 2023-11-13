@@ -88,7 +88,7 @@ export default function EditProject() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=invest&s[type]=Landing`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/banners?s[page]=Edit Project&s[type]=Landing"
         )
         .then((response) => {
@@ -353,7 +353,7 @@ export default function EditProject() {
     await axios
       .post(
         // `${baseUrl}/api/member/user-competition/update`
-        process.env.NEXT_PUBLIC_BASE_URL +
+        "https://dev8.sidat.digital" +
           "/api/member/user-competition/update",
 
         updatedProject,
@@ -396,7 +396,7 @@ export default function EditProject() {
   //   await axios
   //     .get(
   //       // `${baseUrl}/api/member/user-competition-file/delete?file_id=${fileID}`
-  //       process.env.NEXT_PUBLIC_BASE_URL +
+  //       "https://dev8.sidat.digital" +
   //         "/api/member/user-competition-file/delete?file_id=" +
   //         fileID,
 
@@ -429,7 +429,7 @@ export default function EditProject() {
   const deleteCompetetionFile = async (fileID) => {
     try {
       await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL +
+        "https://dev8.sidat.digital" +
           "/api/member/user-competition-file/delete?file_id=" +
           fileID,
 

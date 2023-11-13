@@ -16,7 +16,7 @@ export default function Overview() {
   const GetBanner = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL +
+        "https://dev8.sidat.digital" +
           "/api/banners?s[page]=Overview&s[type]=Landing"
       );
       const bannerData = response?.data?.response?.data[0];
@@ -35,7 +35,7 @@ export default function Overview() {
     try {
       const response = await axios.get(
         // `${baseUrl}/api/page/about`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/page/overview"
+        "https://dev8.sidat.digital" + "/api/page/overview"
       );
       setContent(response?.data?.response);
       console.log(response.data.response);

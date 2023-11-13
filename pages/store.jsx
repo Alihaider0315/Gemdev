@@ -67,7 +67,7 @@ export default function Store() {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -91,7 +91,7 @@ export default function Store() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=store&s[type]=Landing`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/banners?s[page]=store&s[type]=Landing"
         )
         .then((response) => {
@@ -110,7 +110,7 @@ export default function Store() {
       await axios
         .get(
           // `${baseUrl}/api/page/store`
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/page/store"
+          "https://dev8.sidat.digital" + "/api/page/store"
         )
         .then((response) => {
           setContent(response?.data?.response);

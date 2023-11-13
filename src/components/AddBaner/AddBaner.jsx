@@ -20,7 +20,7 @@ export default function AddBaner({ page }) {
       await axios
         .get(
           // `${baseUrl}/api/advertisements?page=${encodeURIComponent(page)}`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/advertisements?page=" +
             encodeURIComponent(page)
         )

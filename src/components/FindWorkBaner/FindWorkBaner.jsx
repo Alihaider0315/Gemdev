@@ -20,7 +20,7 @@ export default function FindWorkBaner() {
   const getFindWork = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/find-work"
+        "https://dev8.sidat.digital" + "/api/find-work"
       );
       setFindWork(response?.data?.response?.data || []);
       setFindLoder(true);
@@ -113,11 +113,11 @@ export default function FindWorkBaner() {
                               }}
                             />
                           </div>
-                          {/* <div className={styles.date}>
+                          <div className={styles.date}>
                             <span className="yellow">
                               {moment(item.created_at).format("MMMM DD, YYYY")}
                             </span>
-                          </div> */}
+                          </div>
                         </div>
                       </Link>
                     </SwiperSlide>

@@ -77,7 +77,7 @@ export default function PrizesAndWinners() {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -99,7 +99,7 @@ export default function PrizesAndWinners() {
   const GetPrize = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/competition-prizes"
+        "https://dev8.sidat.digital" + "/api/competition-prizes"
       );
       // console.log(response?.data?.response?.data, "chrcking");
 
@@ -120,7 +120,7 @@ export default function PrizesAndWinners() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=talenthunt/prizes and winners&s[type]=Landing`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/banners?s[page]=Prizes & Winners&s[type]=Landing"
         )
 

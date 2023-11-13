@@ -47,7 +47,7 @@ export default function News() {
     try {
       const response = await axios.get(
         // `${baseUrl}/api/news?page=${currentPage}`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/news?page=" + page
+        "https://dev8.sidat.digital" + "/api/news?page=" + page
       );
       return response.data.response.data; // Return events data
     } catch (error) {
@@ -104,7 +104,7 @@ export default function News() {
   const GetNewsCategoreis = async () => {
     try {
       await axios
-        .get(process.env.NEXT_PUBLIC_BASE_URL + "/api/ajax/news_categories")
+        .get("https://dev8.sidat.digital" + "/api/ajax/news_categories")
         .then((response) => {
           setNewsCategories(response.data);
           setNewsCategoriesLoader(true);
@@ -122,7 +122,7 @@ export default function News() {
       axios
         .get(
           // `${baseUrl}/api/events?category_id=${catID}&q=`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/news?category_id=" +
             catID +
             "&q="
@@ -214,7 +214,7 @@ export default function News() {
     try {
       await axios
         .get(
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/banners?s[page]=News&s[type]=Landing"
         )
         .then((response) => {
@@ -247,7 +247,7 @@ export default function News() {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {

@@ -14,7 +14,7 @@ export default function NewsLetter() {
     axios
       .post(
         // `${baseUrl}/api/subscribers`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/subscribers",
+        "https://dev8.sidat.digital" + "/api/subscribers",
         { email: email }
       )
       .then((response) => {

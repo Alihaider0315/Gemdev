@@ -40,7 +40,7 @@ export default function News() {
     try {
       const response = await axios.get(
         // `${baseUrl}/api/news?page=${currentPage}`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/news?page=" + currentPage
+        "https://dev8.sidat.digital" + "/api/news?page=" + currentPage
       );
       setNews((prevNews) => [...prevNews, ...response.data?.response?.data]);
       setPerPage(response.data.response.per_page);
@@ -118,7 +118,7 @@ export default function News() {
     try {
       await axios
         .get(
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/banners?s[page]=News&s[type]=Landing"
         )
         .then((response) => {
@@ -151,7 +151,7 @@ export default function News() {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {

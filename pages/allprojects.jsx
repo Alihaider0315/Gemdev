@@ -30,7 +30,7 @@ export default function Projects() {
       await axios
         .get(
           // `${baseUrl}/api/projects?category_id=${allProjectCategory}`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/projects?category_id=" +
             allProjectCategory
         )
@@ -60,7 +60,7 @@ export default function Projects() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=Overview&s[type]=Landing`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/banners?s[page]=Projects&s[type]=Landing"
         )
         .then((response) => {

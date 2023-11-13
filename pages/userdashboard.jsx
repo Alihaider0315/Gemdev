@@ -76,7 +76,7 @@ const UserDashboard = () => {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -100,8 +100,8 @@ const UserDashboard = () => {
       await axios
         .get(
           // `${baseUrl}/api/landing_page`
-          // process.env.NEXT_PUBLIC_BASE_URL + "/api/slider/user-dashboard"
-          process.env.NEXT_PUBLIC_BASE_URL +
+          // "https://dev8.sidat.digital" + "/api/slider/user-dashboard"
+          "https://dev8.sidat.digital" +
             "/api/user_dashboard_slider/user-dashboard"
         )
         .then((response) => {

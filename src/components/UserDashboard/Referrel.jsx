@@ -9,48 +9,30 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Referrel = () => {
-  const [isCopying, setIsCopying] = useState(false);
-  const [user, setUser] = useState(null);
-  const [copylink, setCopyLink] = useState(null);
-  const [email, setEmail] = useState("");
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false); // Add new state variable
-
   const userToken = localStorage.get("loginAuth")?.data?.api_token;
+
   const handleCopy = async () => {
-    if (!isCopying && !isButtonDisabled) {
-      try {
-        setIsCopying(true);
-        const response = await axios.post(
-          // `${baseUrl}/api/member/copy-refer`,
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/copy-refer",
+    try {
+      const response = await axios.post(
+        // `${baseUrl}/api/member/copy-refer`,
+        "https://dev8.sidat.digital" + "/api/member/copy-refer",
 
-          {},
-          {
-            headers: {
-              Authorization: `Bearer ${userToken}`,
-            },
-          }
-        );
-
-        // alert(response.data.message);
-        if (response?.data?.status === true) {
-          setCopyLink(response?.data?.link);
-          toast.success(response?.data?.message, {
-            autoClose: 5000,
-          });
-          setIsButtonDisabled(true);
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${userToken}`,
+          },
         }
-        // setCopyLink(response?.data?.link);
-        // toast.success("Link copied successfully");
-      } catch (error) {
-        console.error(error);
-        // alert(error.message);
-        toast.error(error.message, {
-          autoClose: 5000,
-        });
-      } finally {
-        setIsCopying(false);
-      }
+      );
+      // alert(response.data.message);
+      setCopyLink(response?.data?.link);
+      // console.log(response.data, "checking response");
+    } catch (error) {
+      console.error(error);
+      // alert(error.message);
+      toast.error(error.message, {
+        autoClose: 5000,
+      });
     }
   };
   const handleSubmit = async (e) => {
@@ -58,7 +40,7 @@ const Referrel = () => {
     try {
       const response = await axios.post(
         // `${baseUrl}/api/member/refer`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/member/refer",
+        "https://dev8.sidat.digital" + "/api/member/refer",
         { email: email },
         {
           headers: {
@@ -84,17 +66,13 @@ const Referrel = () => {
       });
     }
   };
-
+  const [user, setUser] = useState(null);
+  const [copylink, setCopyLink] = useState(null);
+  const [email, setEmail] = useState("");
   useEffect(() => {
     setUser(reactLocalStorage.getObject("loginAuth").data);
   }, []);
-  useEffect(() => {
-    if (copylink) {
-      handleCopy();
 
-      console.log("Copy link value:", copylink);
-    }
-  }, [copylink]);
   return (
     <div className={styles.referrel_parent}>
       <form className={styles.referrel_parent2} onSubmit={handleSubmit}>
@@ -111,12 +89,7 @@ const Referrel = () => {
         />
         <button>Submit</button>
       </form>
-      <Button
-        text="Copy Link"
-        onClick={handleCopy}
-        link={copylink}
-        isButtonDisabled={isButtonDisabled}
-      />
+      <Button text="Copy Link" onClick={handleCopy} link={copylink} />
       {/* <ToastContainer className="tost" /> */}
     </div>
   );

@@ -118,7 +118,7 @@ const EditProfileForm = ({
       await axios
         .post(
           // `${baseUrl}/api/member/update_profile`
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/update_profile",
+          "https://dev8.sidat.digital" + "/api/member/update_profile",
           updatedUser,
           {
             headers: {
@@ -144,7 +144,7 @@ const EditProfileForm = ({
     axios
       .get(
         // `${baseUrl}/api/ajax/countries`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/ajax/countries"
+        "https://dev8.sidat.digital" + "/api/ajax/countries"
       )
       .then((response) => {
         // handle the response here
@@ -160,7 +160,7 @@ const EditProfileForm = ({
     axios
       .get(
         // `${baseUrl}/api/ajax/cities/${country}`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/ajax/cities/" + country
+        "https://dev8.sidat.digital" + "/api/ajax/cities/" + country
       )
       .then((response) => {
         setCityList(response.data);

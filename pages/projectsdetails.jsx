@@ -33,7 +33,7 @@ export default function ProjectsDetails() {
       await axios
         .get(
           // `${baseUrl}/api/project-details/${projectsSlug})`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/project-details/" +
             projectsSlug,
           {
@@ -69,7 +69,7 @@ export default function ProjectsDetails() {
       await axios
         .get(
           // `${baseUrl}/api/project-details/${slugallproject})`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/project-details/" +
             slugallproject,
           {

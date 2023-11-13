@@ -22,7 +22,7 @@ const TermsAndConditions = () => {
         .get(
           // `${baseUrl}/api/banners?s[page]=Partners&s[type]=Landing`
 
-          process.env.NEXT_PUBLIC_BASE_URL +
+          "https://dev8.sidat.digital" +
             "/api/banners?s[page]=Terms and Condition&s[type]=Landing"
         )
         .then((response) => {
@@ -44,7 +44,7 @@ const TermsAndConditions = () => {
       await axios
         .get(
           // `${baseUrl}/api/page/mission-she`
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/page/terms-and-condition"
+          "https://dev8.sidat.digital" + "/api/page/terms-and-condition"
         )
         .then((response) => {
           setContent(response?.data?.response);

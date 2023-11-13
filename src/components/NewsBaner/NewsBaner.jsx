@@ -26,7 +26,7 @@ export default function News() {
       await axios
         .get(
           // `${baseUrl}/api/news`
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/news"
+          "https://dev8.sidat.digital" + "/api/news"
         )
         .then((response) => {
           setNews(response?.data?.response?.data);
@@ -86,17 +86,17 @@ export default function News() {
             className={styles.carousel}
             ref={swiperRef} // Assign the swiperRef to the Swiper component
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            slidesPerView={2}
+            slidesPerView={3}
             spaceBetween={24}
             breakpoints={{
               // 1920: {
               //   slidesPerView: 5,
               // },
               1440: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
               1024: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
               768: {
                 slidesPerView: 2,

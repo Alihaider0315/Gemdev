@@ -33,7 +33,7 @@
 //       await axios
 //         .get(
 //           // `${baseUrl}/api/news?page=${currentPage}`
-//           process.env.NEXT_PUBLIC_BASE_URL + "/api/news?page=" + currentPage
+//           "https://dev8.sidat.digital" + "/api/news?page=" + currentPage
 //         )
 //         .then((response) => {
 //           setNews(response?.data?.response?.data);

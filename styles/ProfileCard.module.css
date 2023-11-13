@@ -284,10 +284,6 @@
   z-index: 999999;
 }
 
-.disabledButton {
-  color: black;
-  font-size: 16px;
-}
 @media screen and (max-width: 1440px) {
   .parent,
   .parent1 {

@@ -30,7 +30,7 @@ function FacebookAuth() {
     // Proceed with Facebook authentication
     axios
       .post(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/member/social-auth",
+        "https://dev8.sidat.digital" + "/api/member/social-auth",
 
         {
           name: name,
