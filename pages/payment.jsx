@@ -53,7 +53,7 @@ export default function Payment() {
     if (paymentBank.payment_type === "bank") {
       try {
         const res = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             // "/api/member/user-competition/payment-store",
             "/api/member/user-competition/copy-payment-store",
 
@@ -83,7 +83,7 @@ export default function Payment() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=talenthunt/submit now&s[type]=Landing`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=Payments&s[type]=Landing"
         )
 

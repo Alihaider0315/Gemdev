@@ -105,10 +105,10 @@ export default function EditProject() {
         axios
           .get(
             // `/api/projects/${id}`
-            // process.env.NEXT_PUBLIC_BASE_URL +
+            // 'https://dev8.sidat.digital' +
             //   "/api/member/registered-competitions?competition_id=" +
             //   1,
-            process.env.NEXT_PUBLIC_BASE_URL +
+            'https://dev8.sidat.digital' +
               "/api/competition_entries?user_competition_id=" +
               id,
             {
@@ -140,7 +140,7 @@ export default function EditProject() {
   //     await axios
   //       .get(
   //         // `${baseUrl}/api/banners?s[page]=talenthunt/submit now&s[type]=Landing`
-  //         process.env.NEXT_PUBLIC_BASE_URL +
+  //         'https://dev8.sidat.digital' +
   //           "/api/banners?s[page]=Project Preview&s[type]=Landing"
   //       )
 
@@ -161,7 +161,7 @@ export default function EditProject() {
   const GetBanner = async () => {
     try {
       const response = await axios.get(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/banners?s[page]=Project Preview&s[type]=Landing`
+        `${'https://dev8.sidat.digital'}/api/banners?s[page]=Project Preview&s[type]=Landing`
       );
 
       setBanner(response?.data?.response?.data[0]);

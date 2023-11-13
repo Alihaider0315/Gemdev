@@ -18,7 +18,7 @@ export default function TalentsBnaer() {
   const GetTalent = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/talents"
+        'https://dev8.sidat.digital' + "/api/talents"
       );
       setTalents(response?.data?.response?.data);
       setTalentsLoader(true);

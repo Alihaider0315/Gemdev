@@ -21,7 +21,7 @@ export default function LatestEvents() {
       await axios
         .get(
           // `${baseUrl}/api/events`
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/events"
+          'https://dev8.sidat.digital' + "/api/events"
         )
         .then((response) => {
           const lastSixElements = response.data.response.data.slice(0, 3);

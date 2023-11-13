@@ -93,7 +93,7 @@ export default function SubmitNow(props) {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=talenthunt/submit now&s[type]=Landing`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=talenthunt/submit now&s[type]=Landing"
         )
 
@@ -199,7 +199,7 @@ export default function SubmitNow(props) {
     await axios
       .post(
         // `${baseUrl}/api/member/user-competition/store`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/member/user-competition/store",
+        'https://dev8.sidat.digital' + "/api/member/user-competition/store",
 
         project,
         {
@@ -238,7 +238,7 @@ export default function SubmitNow(props) {
     await axios
       .post(
         // `${baseUrl}/api/member/user-competition/store`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/member/user-competition/store",
+        'https://dev8.sidat.digital' + "/api/member/user-competition/store",
 
         project,
         {
@@ -587,7 +587,7 @@ export default function SubmitNow(props) {
 export async function getServerSideProps() {
   const res1 = await axios.get(
     // `${baseUrl}/api/competition-categories?competition_id=${1}`
-    process.env.NEXT_PUBLIC_BASE_URL +
+    'https://dev8.sidat.digital' +
       " /api/competition-categories?competition_id=" +
       1
   );
@@ -595,7 +595,7 @@ export async function getServerSideProps() {
 
   const res2 = await axios.get(
     // `${baseUrl}/api/competitions`
-    process.env.NEXT_PUBLIC_BASE_URL + "/api/competitions"
+    'https://dev8.sidat.digital' + "/api/competitions"
   );
   const data2 = res2?.data?.response?.data.filter(
     (obj) => obj.status === "Active"

@@ -68,7 +68,7 @@ export default function AboutCompetition() {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          'https://dev8.sidat.digital' + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -91,7 +91,7 @@ export default function AboutCompetition() {
     try {
       await axios
         .get(
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=about-competition-detail&s[type]=Landing"
         )
 
@@ -110,7 +110,7 @@ export default function AboutCompetition() {
   const GetContent = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/page/about-competition"
+        'https://dev8.sidat.digital' + "/api/page/about-competition"
       );
       setContent(response?.data?.response);
       setAboutCompetition(true);

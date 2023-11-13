@@ -23,7 +23,7 @@ export default function EventsDetails() {
   const GetNewsInfoSlug = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/event/" + slug,
+        'https://dev8.sidat.digital' + "/api/event/" + slug,
 
         {
           headers: {

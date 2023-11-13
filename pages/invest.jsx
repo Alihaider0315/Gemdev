@@ -71,7 +71,7 @@ export default function Invest() {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          'https://dev8.sidat.digital' + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -94,7 +94,7 @@ export default function Invest() {
     try {
       await axios
         .get(
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=invest&s[type]=Landing"
         )
         .then((response) => {
@@ -112,7 +112,7 @@ export default function Invest() {
   const GetContent = async () => {
     try {
       await axios
-        .get(process.env.NEXT_PUBLIC_BASE_URL + "/api/page/invest")
+        .get('https://dev8.sidat.digital' + "/api/page/invest")
         .then((response) => {
           setContent(response?.data?.response);
           setContentLoader(true);

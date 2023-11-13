@@ -103,7 +103,7 @@ const EditPicture = ({
     axios
       .get(
         // `${baseUrl}/api/member/user_profile`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/member/user_profile",
+        'https://dev8.sidat.digital' + "/api/member/user_profile",
         {
           headers: {
             Authorization:
@@ -136,7 +136,7 @@ const EditPicture = ({
 
     try {
       const response = await axios.post(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/member/update_bio",
+        'https://dev8.sidat.digital' + "/api/member/update_bio",
         { photo: imageToUpload },
         {
           headers: {

@@ -21,7 +21,7 @@ export default function RulesBaner({ page }) {
       await axios
         .get(
           // `${baseUrl}/api/faqs?page=${page}`
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/faqs?page=" + page
+          'https://dev8.sidat.digital' + "/api/faqs?page=" + page
         )
         .then((response) => {
           setRules(response.data.faqs[0].list);

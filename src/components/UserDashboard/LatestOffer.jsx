@@ -20,7 +20,7 @@ export default function LatestOffer() {
       await axios
         .get(
           // `${baseUrl}/api/news?page=${currentPage}`
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/news"
+          'https://dev8.sidat.digital' + "/api/news"
         )
         .then((response) => {
           const lastThreeElements = response?.data?.response?.data.slice(0, 3);

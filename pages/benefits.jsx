@@ -143,7 +143,7 @@ export default function Benefits() {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          'https://dev8.sidat.digital' + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -166,7 +166,7 @@ export default function Benefits() {
     try {
       await axios
         .get(
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=Benefits&s[type]=Landing"
         )
         .then((response) => {
@@ -184,7 +184,7 @@ export default function Benefits() {
   const GetBenefit = async () => {
     try {
       await axios
-        .get(process.env.NEXT_PUBLIC_BASE_URL + "/api/benefit_page")
+        .get('https://dev8.sidat.digital' + "/api/benefit_page")
         .then((response) => {
           setBenefit(response?.data?.slider_section);
           setLoder(false);

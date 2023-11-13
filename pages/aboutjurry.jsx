@@ -78,7 +78,7 @@ export default function AboutJurry(props) {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          'https://dev8.sidat.digital' + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -101,7 +101,7 @@ export default function AboutJurry(props) {
     try {
       await axios
         .get(
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=Jury & Mentors&s[type]=Landing"
         )
 
@@ -143,7 +143,7 @@ export default function AboutJurry(props) {
   const GetJurry = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/competition-jury-all"
+        'https://dev8.sidat.digital' + "/api/competition-jury-all"
       );
       // console.log(response?.data?.response?.data, "chrcking");
 
@@ -288,7 +288,7 @@ export default function AboutJurry(props) {
 }
 export async function getServerSideProps() {
   const res = await axios.get(
-    process.env.NEXT_PUBLIC_BASE_URL +
+    'https://dev8.sidat.digital' +
       // "/api/competition-jury?competition_id=" +
       // 1
       "/api/competition-jury-all"

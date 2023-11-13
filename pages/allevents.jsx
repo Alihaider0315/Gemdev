@@ -86,7 +86,7 @@
 //         .get(
 //           // `${baseUrl}/api/banners?s[page]=Events&s[type]=Landing`
 
-//           process.env.NEXT_PUBLIC_BASE_URL +
+//           'https://dev8.sidat.digital' +
 //             "/api/banners?s[page]=Events&s[type]=Landing"
 //         )
 //         .then((response) => {
@@ -108,7 +108,7 @@
 //           //   "allEventsCategory"
 //           // )}&page=${currentPage}`
 
-//           process.env.NEXT_PUBLIC_BASE_URL +
+//           'https://dev8.sidat.digital' +
 //             "/api/events?category_id=" +
 //             localStorage.get("allEventsCategory") +
 //             "&page=" +

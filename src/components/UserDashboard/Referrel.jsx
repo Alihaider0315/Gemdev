@@ -22,7 +22,7 @@ const Referrel = () => {
         setIsCopying(true);
         const response = await axios.post(
           // `${baseUrl}/api/member/copy-refer`,
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/copy-refer",
+          'https://dev8.sidat.digital' + "/api/member/copy-refer",
 
           {},
           {
@@ -58,7 +58,7 @@ const Referrel = () => {
     try {
       const response = await axios.post(
         // `${baseUrl}/api/member/refer`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/member/refer",
+        'https://dev8.sidat.digital' + "/api/member/refer",
         { email: email },
         {
           headers: {

@@ -20,7 +20,7 @@ export default function MasterClass({ formattedDate }) {
   const getMasterClass = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/master-class"
+        'https://dev8.sidat.digital' + "/api/master-class"
       );
       setMasterClass(response?.data?.response?.data || []);
       setMasterLoder(true);

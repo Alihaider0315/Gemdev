@@ -162,7 +162,7 @@ const SignupStep1 = ({}) => {
     axios
       .get(
         // `${baseUrl}/api/ajax/countries`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/ajax/countries"
+        'https://dev8.sidat.digital' + "/api/ajax/countries"
       )
       .then((response) => {
         // handle the response here
@@ -178,7 +178,7 @@ const SignupStep1 = ({}) => {
     axios
       .get(
         // `${baseUrl}/api/ajax/cities/${country}`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/ajax/cities/" + country
+        'https://dev8.sidat.digital' + "/api/ajax/cities/" + country
       )
       .then((response) => {
         // Sort the response data before setting it in cityList state
@@ -256,7 +256,7 @@ const SignupStep1 = ({}) => {
     // axios
     //   .post(
     //     // "https://a.iamgemglobal.com/api/check-user"
-    //     process.env.NEXT_PUBLIC_BASE_URL + "/api/check-user-phone",
+    //     'https://dev8.sidat.digital' + "/api/check-user-phone",
     //     {
     //       phone: phone,
     //     }
@@ -275,7 +275,7 @@ const SignupStep1 = ({}) => {
     // axios
     //   .post(
     //     // "https://a.iamgemglobal.com/api/check-user"
-    //     process.env.NEXT_PUBLIC_BASE_URL + "/api/check-user",
+    //     'https://dev8.sidat.digital' + "/api/check-user",
     //     {
     //       email: email,
     //     }
@@ -292,10 +292,10 @@ const SignupStep1 = ({}) => {
     //   });
 
     Promise.all([
-      axios.post(process.env.NEXT_PUBLIC_BASE_URL + "/api/check-user-phone", {
+      axios.post('https://dev8.sidat.digital' + "/api/check-user-phone", {
         phone: phone,
       }),
-      axios.post(process.env.NEXT_PUBLIC_BASE_URL + "/api/check-user", {
+      axios.post('https://dev8.sidat.digital' + "/api/check-user", {
         email: email,
       }),
     ])

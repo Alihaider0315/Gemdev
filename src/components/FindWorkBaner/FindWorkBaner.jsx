@@ -20,7 +20,7 @@ export default function FindWorkBaner() {
   const getFindWork = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/find-work"
+        'https://dev8.sidat.digital' + "/api/find-work"
       );
       setFindWork(response?.data?.response?.data || []);
       setFindLoder(true);

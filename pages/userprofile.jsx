@@ -73,7 +73,7 @@ const UserProfile = () => {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          'https://dev8.sidat.digital' + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -96,7 +96,7 @@ const UserProfile = () => {
     axios
       .get(
         // `${baseUrl}/api/member/user_profile`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/member/user_profile",
+        'https://dev8.sidat.digital' + "/api/member/user_profile",
         {
           headers: {
             Authorization:

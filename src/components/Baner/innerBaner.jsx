@@ -44,7 +44,7 @@ export default function InnerBaner({ headingBanner, source, fileType }) {
       await axios
         .get(
           // `${baseUrl}/api/landing_page`
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/landing_page"
+          'https://dev8.sidat.digital' + "/api/landing_page"
         )
         .then((response) => {
           // console.log("data checking", response.data);

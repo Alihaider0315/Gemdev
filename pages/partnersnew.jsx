@@ -83,7 +83,7 @@ export default function Partners() {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          'https://dev8.sidat.digital' + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -108,7 +108,7 @@ export default function Partners() {
         .get(
           // `${baseUrl}/api/banners?s[page]=Partners&s[type]=Landing`
 
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=Partners&s[type]=Landing"
         )
         .then((response) => {
@@ -129,7 +129,7 @@ export default function Partners() {
       await axios
         .get(
           // `${baseUrl}/api/partners`
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/partners_new"
+          'https://dev8.sidat.digital' + "/api/partners_new"
         )
         .then((response) => {
           setCategories(response?.data.categories);

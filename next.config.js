@@ -17,7 +17,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: [process.env.NEXT_PUBLIC_GET_IMAGE],
+    domains: ['dev8.sidat.digital'],
   },
 };
 

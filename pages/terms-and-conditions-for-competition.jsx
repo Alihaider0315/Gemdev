@@ -23,7 +23,7 @@ export default function Overview() {
         .get(
           // `${baseUrl}/api/banners?s[page]=Partners&s[type]=Landing`
 
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=Competition Terms&s[type]=Landing"
         )
         .then((response) => {
@@ -43,7 +43,7 @@ export default function Overview() {
   const GetContent = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL +
+        'https://dev8.sidat.digital' +
           "/api/page/terms-and-conditions-for-competition"
       );
       setContent(response?.data?.response);

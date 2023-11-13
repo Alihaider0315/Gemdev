@@ -103,7 +103,7 @@ export default function TalentBord(props) {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          'https://dev8.sidat.digital' + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -127,7 +127,7 @@ export default function TalentBord(props) {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=talenthunt/talent board&s[type]=Landing`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=Talent Board&s[type]=Landing"
         )
 
@@ -164,7 +164,7 @@ export default function TalentBord(props) {
       await axios
         .get(
           // `${baseUrl}/api/competition/participants?competition_id=1&name=${name}&topic=${topic}&page=${currentPage}`
-          // process.env.NEXT_PUBLIC_BASE_URL +
+          // 'https://dev8.sidat.digital' +
           //   // "/api/competition/participants?competition_id=1&name=" +
           //   "/api/competition/participants?name=" +
           //   name +
@@ -172,7 +172,7 @@ export default function TalentBord(props) {
           //   topic +
           //   "&page=" +
           //   currentPage
-          `${process.env.NEXT_PUBLIC_BASE_URL}/api/competition/participants?name=${searchCriteria.name}&topic=${searchCriteria.topic}`
+          `${'https://dev8.sidat.digital'}/api/competition/participants?name=${searchCriteria.name}&topic=${searchCriteria.topic}`
         )
         .then((response) => {
           setProjects(response.data.response.data);
@@ -204,7 +204,7 @@ export default function TalentBord(props) {
 
     try {
       const response = await axios.post(
-        process.env.NEXT_PUBLIC_BASE_URL +
+        'https://dev8.sidat.digital' +
           // "/api/competition/participants?competition_id=1&page=" +
           // page
           "/api/competition/participants-all?page=" +
@@ -288,7 +288,7 @@ export default function TalentBord(props) {
     try {
       const response = await axios.get(
         // `${baseUrl}/api/competition-categories?competition_id=1`
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/competition-all-categories`
+        `${'https://dev8.sidat.digital'}/api/competition-all-categories`
       );
       setProjectCategories(response?.data?.response?.data);
       setProjectCategoriesLoader(true);
@@ -675,7 +675,7 @@ export default function TalentBord(props) {
 export async function getServerSideProps() {
   const res = await axios.get(
     // `${baseUrl}/api/competition/participants?competition_id=${1}`
-    process.env.NEXT_PUBLIC_BASE_URL +
+    'https://dev8.sidat.digital' +
       "/api/competition/participants?competition_id=" +
       1
   );

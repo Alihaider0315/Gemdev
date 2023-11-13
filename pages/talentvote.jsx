@@ -70,7 +70,7 @@ export default function TalentVote() {
   //     await axios
   //       .get(
 
-  //         process.env.NEXT_PUBLIC_BASE_URL +
+  //         'https://dev8.sidat.digital' +
   //           "/api/competition/participants?competition_id=" +
   //           1
   //       )
@@ -100,7 +100,7 @@ export default function TalentVote() {
     if (cometetion_id) {
       axios
         .get(
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/competition_entries?user_competition_id=" +
             cometetion_id,
           {
@@ -128,7 +128,7 @@ export default function TalentVote() {
     axios
       .post(
         // `${baseUrl}/api/member/competition/add-vote`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/member/competition/add-vote",
+        'https://dev8.sidat.digital' + "/api/member/competition/add-vote",
         // { user_compeition_id: competetion_id },
         {
           headers: {
@@ -205,7 +205,7 @@ export default function TalentVote() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=Benefits&s[type]=Landing`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=Competition Entry&s[type]=Landing"
         )
         .then((response) => {

@@ -26,7 +26,7 @@ export default function SignupStep2({
     axios
       .get(
         // `${baseUrl}/api/ajax/countries`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/ajax/countries"
+        'https://dev8.sidat.digital' + "/api/ajax/countries"
       )
       .then((response) => {
         // handle the response here
@@ -42,7 +42,7 @@ export default function SignupStep2({
     axios
       .get(
         // `${baseUrl}/api/ajax/cities/${selectedCountry}`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/ajax/cities/" + selectedCountry
+        'https://dev8.sidat.digital' + "/api/ajax/cities/" + selectedCountry
       )
       .then((response) => {
         setCityList(response.data);

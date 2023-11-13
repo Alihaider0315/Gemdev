@@ -36,7 +36,7 @@ const Activities = () => {
     try {
       const response = await axios.get(
         // `${baseUrl}/api/member/user-activity`
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/member/user-activity",
+        'https://dev8.sidat.digital' + "/api/member/user-activity",
         {
           headers: {
             Authorization: `Bearer ${userToken}`,

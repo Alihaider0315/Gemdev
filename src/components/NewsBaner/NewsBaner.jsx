@@ -26,7 +26,7 @@ export default function News() {
       await axios
         .get(
           // `${baseUrl}/api/news`
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/news"
+          'https://dev8.sidat.digital' + "/api/news"
         )
         .then((response) => {
           setNews(response?.data?.response?.data);

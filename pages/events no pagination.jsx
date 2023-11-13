@@ -83,7 +83,7 @@ export default function Events() {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          'https://dev8.sidat.digital' + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -109,7 +109,7 @@ export default function Events() {
     try {
       await axios
         .get(
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=Events&s[type]=Landing"
         )
         .then((response) => {
@@ -128,7 +128,7 @@ export default function Events() {
     try {
       await axios
         .get(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/events?page=" + currentPage
+          'https://dev8.sidat.digital' + "/api/events?page=" + currentPage
         )
         .then((response) => {
           setEvents(response.data.response.data);
@@ -146,7 +146,7 @@ export default function Events() {
   const GetEventCategoreis = async () => {
     try {
       await axios
-        .get(process.env.NEXT_PUBLIC_BASE_URL + "/api/ajax/event_categories")
+        .get('https://dev8.sidat.digital' + "/api/ajax/event_categories")
         .then((response) => {
           setEventCategories(response.data);
           setEventCategoriesLoader(true);
@@ -165,7 +165,7 @@ export default function Events() {
       axios
         .get(
           // `${baseUrl}/api/events?category_id=${catID}&q=`
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/events?category_id=" +
             catID +
             "&q="

@@ -258,7 +258,7 @@ const CompleteProfile = () => {
     // Check if the phone number already exists
     try {
       const phoneCheckResponse = await axios.post(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/check-user-phone",
+        'https://dev8.sidat.digital' + "/api/check-user-phone",
         {
           phone: phone,
         }
@@ -281,7 +281,7 @@ const CompleteProfile = () => {
       // Set loading state to true
 
       const response = await axios.post(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/member/social-auth",
+        'https://dev8.sidat.digital' + "/api/member/social-auth",
 
         {
           provider_id,
@@ -327,7 +327,7 @@ const CompleteProfile = () => {
 
   useEffect(() => {
     axios
-      .get(process.env.NEXT_PUBLIC_BASE_URL + "/api/ajax/countries")
+      .get('https://dev8.sidat.digital' + "/api/ajax/countries")
       .then((response) => {
         setCountryList(response.data);
       })
@@ -338,7 +338,7 @@ const CompleteProfile = () => {
 
   useEffect(() => {
     axios
-      .get(process.env.NEXT_PUBLIC_BASE_URL + "/api/ajax/cities/" + country)
+      .get('https://dev8.sidat.digital' + "/api/ajax/cities/" + country)
       .then((response) => {
         const sortedCities = response.data.sort((a, b) =>
           a.label.localeCompare(b.label)
@@ -400,7 +400,7 @@ const CompleteProfile = () => {
     axios
       .post(
         // "https://a.iamgemglobal.com/api/check-user"
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/check-user",
+        'https://dev8.sidat.digital' + "/api/check-user",
         {
           email: email,
         }

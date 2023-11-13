@@ -47,7 +47,7 @@ export default function AboutBaner() {
   const GetContent = async () => {
     try {
       const response = await axios.get(
-        process.env.NEXT_PUBLIC_BASE_URL + "/api/page/Talent-competition-home"
+        'https://dev8.sidat.digital' + "/api/page/Talent-competition-home"
       );
       setContent(response?.data?.response);
       // console.log(response.data);

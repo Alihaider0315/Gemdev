@@ -31,7 +31,7 @@ const Refferel = () => {
     axios
       .get(
         // `${baseUrl}/api/member/referrals?page=${currentPage}`
-        process.env.NEXT_PUBLIC_BASE_URL +
+        'https://dev8.sidat.digital' +
           "/api/member/referrals?page=" +
           currentPage,
 

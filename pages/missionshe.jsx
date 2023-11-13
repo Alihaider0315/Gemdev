@@ -70,7 +70,7 @@ export default function Missionshe() {
           date_time: localDateTime,
         };
         const response = await axios.post(
-          process.env.NEXT_PUBLIC_BASE_URL + "/api/member/add-user-activity",
+          'https://dev8.sidat.digital' + "/api/member/add-user-activity",
           requestBody,
           {
             headers: {
@@ -93,7 +93,7 @@ export default function Missionshe() {
     try {
       await axios
         .get(
-          process.env.NEXT_PUBLIC_BASE_URL +
+          'https://dev8.sidat.digital' +
             "/api/banners?s[page]=mission she&s[type]=Landing"
         )
 
@@ -112,7 +112,7 @@ export default function Missionshe() {
   const GetContent = async () => {
     try {
       await axios
-        .get(process.env.NEXT_PUBLIC_BASE_URL + "/api/page/mission-she")
+        .get('https://dev8.sidat.digital' + "/api/page/mission-she")
         .then((response) => {
           setContent(response?.data?.response);
 
