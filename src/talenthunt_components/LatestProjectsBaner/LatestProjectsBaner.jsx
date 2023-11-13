@@ -37,7 +37,11 @@ export default function LatestProject() {
       await axios
         .post(
           // `${baseUrl}/api/competition/participants?competition_id=${1}`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             // "/api/competition/participants?competition_id=" +
             // 3
             "/api/competition/participants-all"

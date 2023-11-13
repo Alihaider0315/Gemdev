@@ -28,7 +28,11 @@ const AvatarDropDown = ({ loder, setLoder }) => {
     axios
       .get(
         // `${baseUrl}/api/member/user_profile`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/member/user_profile",
+=======
+        "https://dev8.sidat.digital" + "/api/member/user_profile",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
 
         {
           headers: {

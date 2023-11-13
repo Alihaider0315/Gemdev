@@ -23,7 +23,11 @@ export default function Overview() {
         .get(
           // `${baseUrl}/api/banners?s[page]=Partners&s[type]=Landing`
 
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=Competition Terms&s[type]=Landing"
         )
         .then((response) => {
@@ -43,7 +47,11 @@ export default function Overview() {
   const GetContent = async () => {
     try {
       const response = await axios.get(
+<<<<<<< HEAD
         'https://dev8.sidat.digital' +
+=======
+        "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           "/api/page/terms-and-conditions-for-competition"
       );
       setContent(response?.data?.response);

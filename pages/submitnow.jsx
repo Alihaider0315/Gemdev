@@ -142,7 +142,11 @@ export default function SubmitNow(props) {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {
@@ -167,7 +171,11 @@ export default function SubmitNow(props) {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=talenthunt/submit now&s[type]=Landing`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=Submit Now&s[type]=Landing"
         )
 
@@ -396,7 +404,11 @@ export default function SubmitNow(props) {
 
     // Send the selected competition ID to the server to fetch categories
     const response = await axios.get(
+<<<<<<< HEAD
       'https://dev8.sidat.digital' +
+=======
+      "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         `/api/competition-categories?competition_id=${categoryId}`
     );
     // Update the state with the fetched categories
@@ -452,7 +464,11 @@ export default function SubmitNow(props) {
     await axios
       .post(
         // `${baseUrl}/api/member/user-competition/store`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/member/user-competition/store",
+=======
+        "https://dev8.sidat.digital" + "/api/member/user-competition/store",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
 
         project,
         {
@@ -533,7 +549,11 @@ export default function SubmitNow(props) {
   //   await axios
   //     .post(
   //       // `${baseUrl}/api/member/user-competition/store`
+<<<<<<< HEAD
   //       'https://dev8.sidat.digital' + "/api/member/user-competition/store",
+=======
+  //       "https://dev8.sidat.digital" + "/api/member/user-competition/store",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
 
   //       project,
   //       {
@@ -584,7 +604,11 @@ export default function SubmitNow(props) {
       }
       setLoadingDraft(true); // Start loading
       const response = await axios.post(
+<<<<<<< HEAD
         `${'https://dev8.sidat.digital'}/api/member/user-competition/store`,
+=======
+        `${"https://dev8.sidat.digital"}/api/member/user-competition/store`,
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         project,
         {
           headers: {
@@ -953,7 +977,11 @@ export async function getServerSideProps() {
   const res1 = await axios.get(
     // `${baseUrl}/api/competition-categories?competition_id=${1}`
 
+<<<<<<< HEAD
     'https://dev8.sidat.digital' +
+=======
+    "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       "/api/competition-categories?competition_id=" +
       1
   );
@@ -961,7 +989,11 @@ export async function getServerSideProps() {
 
   const res2 = await axios.get(
     // `${baseUrl}/api/competitions`
+<<<<<<< HEAD
     'https://dev8.sidat.digital' + "/api/competitions"
+=======
+    "https://dev8.sidat.digital" + "/api/competitions"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
   );
   const data2 = res2?.data?.response?.data.filter(
     (obj) => obj.status === "Active"

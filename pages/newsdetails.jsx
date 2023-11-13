@@ -34,7 +34,11 @@ export default function NewsDetails() {
       await axios
         .get(
           // `${baseUrl}/api/news/${slugnews})`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/news/" + slugnews
+=======
+          "https://dev8.sidat.digital" + "/api/news/" + slugnews
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         )
         .then((response) => {
           setNewsInfo(response.data.response);
@@ -53,8 +57,13 @@ export default function NewsDetails() {
     try {
       await axios
         .get(
+<<<<<<< HEAD
           // `'https://dev8.sidat.digital'/api/news/${sluglatestnews})`
           'https://dev8.sidat.digital' + "/api/news/" + sluglatestnews
+=======
+          // `https://dev8.sidat.digital/api/news/${sluglatestnews})`
+          "https://dev8.sidat.digital" + "/api/news/" + sluglatestnews
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         )
         .then((response) => {
           setNewsInfo(response.data.response);
@@ -73,7 +82,11 @@ export default function NewsDetails() {
       await axios
         .get(
           // `${baseUrl}/api/news`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/news"
+=======
+          "https://dev8.sidat.digital" + "/api/news"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         )
         .then((response) => {
           const lastSixElements = response?.data?.response?.data;

@@ -86,7 +86,11 @@
 //         .get(
 //           // `${baseUrl}/api/banners?s[page]=Events&s[type]=Landing`
 
+<<<<<<< HEAD
 //           'https://dev8.sidat.digital' +
+=======
+//           "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
 //             "/api/banners?s[page]=Events&s[type]=Landing"
 //         )
 //         .then((response) => {
@@ -108,7 +112,11 @@
 //           //   "allEventsCategory"
 //           // )}&page=${currentPage}`
 
+<<<<<<< HEAD
 //           'https://dev8.sidat.digital' +
+=======
+//           "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
 //             "/api/events?category_id=" +
 //             localStorage.get("allEventsCategory") +
 //             "&page=" +

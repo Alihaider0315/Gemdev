@@ -31,7 +31,11 @@ const Rewards = () => {
     axios
       .get(
         // `${baseUrl}/api/member/reward-report?page=${currentPage}`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' +
+=======
+        "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           "/api/member/reward-report?page=" +
           currentPage,
 

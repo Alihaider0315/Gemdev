@@ -15,7 +15,11 @@ export default function AboutBanner() {
       const response = await axios.get(
         // `${baseUrl}/api/landing_page`
 
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/landing_page"
+=======
+        "https://dev8.sidat.digital" + "/api/landing_page"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       );
       console.log(response.data);
       setBanner(response.data);

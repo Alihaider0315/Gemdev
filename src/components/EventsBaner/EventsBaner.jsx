@@ -28,7 +28,11 @@ export default function EventsBaner() {
       await axios
         .get(
           // `${baseUrl}/api/events`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/events"
+=======
+          "https://dev8.sidat.digital" + "/api/events"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         )
         .then((response) => {
           const lastSixElements = response.data.response.data.slice(0, 15);

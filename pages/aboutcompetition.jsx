@@ -68,7 +68,11 @@ export default function AboutCompetition() {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {
@@ -91,7 +95,11 @@ export default function AboutCompetition() {
     try {
       await axios
         .get(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=about-competition-detail&s[type]=Landing"
         )
 
@@ -110,7 +118,11 @@ export default function AboutCompetition() {
   const GetContent = async () => {
     try {
       const response = await axios.get(
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/page/about-competition"
+=======
+        "https://dev8.sidat.digital" + "/api/page/about-competition"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       );
       setContent(response?.data?.response);
       setAboutCompetition(true);

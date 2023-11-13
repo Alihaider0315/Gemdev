@@ -40,11 +40,16 @@ export default function InnerBaner({ headingBanner, source, fileType }) {
   const [sliderSectionLoader, setSliderSectionLoader] = useState(false);
 
   const GetBanner = async () => {
+    console.log('TEST !!!!',"https://dev8.sidat.digital");
     try {
       await axios
         .get(
           // `${baseUrl}/api/landing_page`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/landing_page"
+=======
+          "https://dev8.sidat.digital" + "/api/landing_page"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         )
         .then((response) => {
           // console.log("data checking", response.data);

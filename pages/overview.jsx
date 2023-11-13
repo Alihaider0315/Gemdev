@@ -16,7 +16,11 @@ export default function Overview() {
   const GetBanner = async () => {
     try {
       const response = await axios.get(
+<<<<<<< HEAD
         'https://dev8.sidat.digital' +
+=======
+        "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           "/api/banners?s[page]=Overview&s[type]=Landing"
       );
       const bannerData = response?.data?.response?.data[0];
@@ -35,7 +39,11 @@ export default function Overview() {
     try {
       const response = await axios.get(
         // `${baseUrl}/api/page/about`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/page/overview"
+=======
+        "https://dev8.sidat.digital" + "/api/page/overview"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       );
       setContent(response?.data?.response);
       console.log(response.data.response);

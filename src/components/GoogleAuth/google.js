@@ -24,7 +24,11 @@ export default function GoogleAuth() {
       //   .post(Api?.Social_Auth_Register, {
       .post(
         // "http://ent.prologixit.com/api/member/social-auth",
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/member/social-auth",
+=======
+        "https://dev8.sidat.digital" + "/api/member/social-auth",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         {
           name: data?.name,
           email: data?.email,

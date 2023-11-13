@@ -1,52 +1,32 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react'
+import { useState } from 'react';
 import styles from "../../../styles/ProfileCard.module.css";
-import { useEffect } from "react";
 
-const Button = ({ text, onClick, link, isButtonDisabled }) => {
-  console.log(isButtonDisabled, "disa");
+
+const Button = ({ text, onClick, link }) => {
   const [copied, setCopied] = useState(false);
 
-  const handleClick = async () => {
+  const handleClick = () => {
     if (link) {
-      try {
-        navigator.clipboard.writeText(link);
-        setCopied(true);
-        setTimeout(() => {
-          setCopied(false);
-        }, 3000);
-      } catch (error) {
-        console.error("Unable to copy to clipboard:", error);
-      }
-    } else {
-      console.error("No link provided for copying.");
+      navigator.clipboard.writeText(link);
+      setCopied(true); // Set the copied state to true
+      setTimeout(() => {
+        setCopied(false); // Reset the copied state after 3 seconds
+      }, 3000);
     }
-
     if (onClick) {
       onClick();
     }
   };
-  useEffect(() => {
-    if (link) {
-      handleClick();
-    }
-  }, [link]);
-
-  return (
-    <div>
-      {/* <button onClick={handleClick}> */}
-
-      <button
-        onClick={handleClick}
-        disabled={isButtonDisabled}
-        className={isButtonDisabled ? styles.disabledButton : ""}
-      >
+  
+    return (
+      <div>
+      <button  onClick={handleClick}>
         {text}
       </button>
-      {/* {copied && <div className={styles.message}>Link copied!</div>} */}
-      {/* Render the message component */}
+      {copied && <div className={styles.message} >Link copied!</div>} {/* Render the message component */}
     </div>
-  );
-};
-
-export default Button;
+    );
+  };
+  
+  export default Button;

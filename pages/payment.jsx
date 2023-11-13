@@ -53,7 +53,11 @@ export default function Payment() {
     if (paymentBank.payment_type === "bank") {
       try {
         const res = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             // "/api/member/user-competition/payment-store",
             "/api/member/user-competition/copy-payment-store",
 
@@ -83,7 +87,11 @@ export default function Payment() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=talenthunt/submit now&s[type]=Landing`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=Payments&s[type]=Landing"
         )
 

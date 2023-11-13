@@ -26,7 +26,11 @@ export default function SignupStep2({
     axios
       .get(
         // `${baseUrl}/api/ajax/countries`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/ajax/countries"
+=======
+        "https://dev8.sidat.digital" + "/api/ajax/countries"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       )
       .then((response) => {
         // handle the response here
@@ -42,7 +46,11 @@ export default function SignupStep2({
     axios
       .get(
         // `${baseUrl}/api/ajax/cities/${selectedCountry}`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/ajax/cities/" + selectedCountry
+=======
+        "https://dev8.sidat.digital" + "/api/ajax/cities/" + selectedCountry
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       )
       .then((response) => {
         setCityList(response.data);

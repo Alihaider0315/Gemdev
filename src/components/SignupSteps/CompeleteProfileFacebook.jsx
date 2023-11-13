@@ -258,7 +258,11 @@ const CompleteProfile = () => {
     // Check if the phone number already exists
     try {
       const phoneCheckResponse = await axios.post(
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/check-user-phone",
+=======
+        "https://dev8.sidat.digital" + "/api/check-user-phone",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         {
           phone: phone,
         }
@@ -281,7 +285,11 @@ const CompleteProfile = () => {
       // Set loading state to true
 
       const response = await axios.post(
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/member/social-auth",
+=======
+        "https://dev8.sidat.digital" + "/api/member/social-auth",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
 
         {
           provider_id,
@@ -327,7 +335,11 @@ const CompleteProfile = () => {
 
   useEffect(() => {
     axios
+<<<<<<< HEAD
       .get('https://dev8.sidat.digital' + "/api/ajax/countries")
+=======
+      .get("https://dev8.sidat.digital" + "/api/ajax/countries")
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       .then((response) => {
         setCountryList(response.data);
       })
@@ -338,7 +350,11 @@ const CompleteProfile = () => {
 
   useEffect(() => {
     axios
+<<<<<<< HEAD
       .get('https://dev8.sidat.digital' + "/api/ajax/cities/" + country)
+=======
+      .get("https://dev8.sidat.digital" + "/api/ajax/cities/" + country)
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       .then((response) => {
         const sortedCities = response.data.sort((a, b) =>
           a.label.localeCompare(b.label)
@@ -400,7 +416,11 @@ const CompleteProfile = () => {
     axios
       .post(
         // "https://a.iamgemglobal.com/api/check-user"
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/check-user",
+=======
+        "https://dev8.sidat.digital" + "/api/check-user",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         {
           email: email,
         }

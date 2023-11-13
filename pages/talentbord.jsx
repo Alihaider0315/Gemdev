@@ -103,7 +103,11 @@ export default function TalentBord(props) {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {
@@ -127,7 +131,11 @@ export default function TalentBord(props) {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=talenthunt/talent board&s[type]=Landing`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=Talent Board&s[type]=Landing"
         )
 
@@ -164,7 +172,11 @@ export default function TalentBord(props) {
       await axios
         .get(
           // `${baseUrl}/api/competition/participants?competition_id=1&name=${name}&topic=${topic}&page=${currentPage}`
+<<<<<<< HEAD
           // 'https://dev8.sidat.digital' +
+=======
+          // "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           //   // "/api/competition/participants?competition_id=1&name=" +
           //   "/api/competition/participants?name=" +
           //   name +
@@ -172,7 +184,11 @@ export default function TalentBord(props) {
           //   topic +
           //   "&page=" +
           //   currentPage
+<<<<<<< HEAD
           `${'https://dev8.sidat.digital'}/api/competition/participants?name=${searchCriteria.name}&topic=${searchCriteria.topic}`
+=======
+          `${"https://dev8.sidat.digital"}/api/competition/participants?name=${searchCriteria.name}&topic=${searchCriteria.topic}`
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         )
         .then((response) => {
           setProjects(response.data.response.data);
@@ -204,7 +220,11 @@ export default function TalentBord(props) {
 
     try {
       const response = await axios.post(
+<<<<<<< HEAD
         'https://dev8.sidat.digital' +
+=======
+        "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           // "/api/competition/participants?competition_id=1&page=" +
           // page
           "/api/competition/participants-all?page=" +
@@ -288,7 +308,11 @@ export default function TalentBord(props) {
     try {
       const response = await axios.get(
         // `${baseUrl}/api/competition-categories?competition_id=1`
+<<<<<<< HEAD
         `${'https://dev8.sidat.digital'}/api/competition-all-categories`
+=======
+        `${"https://dev8.sidat.digital"}/api/competition-all-categories`
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       );
       setProjectCategories(response?.data?.response?.data);
       setProjectCategoriesLoader(true);
@@ -675,7 +699,11 @@ export default function TalentBord(props) {
 export async function getServerSideProps() {
   const res = await axios.get(
     // `${baseUrl}/api/competition/participants?competition_id=${1}`
+<<<<<<< HEAD
     'https://dev8.sidat.digital' +
+=======
+    "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       "/api/competition/participants?competition_id=" +
       1
   );

@@ -76,7 +76,11 @@ export default function Talenthunt() {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {
@@ -100,8 +104,13 @@ export default function Talenthunt() {
       await axios
         .get(
           // `${baseUrl}/api/landing_page`
+<<<<<<< HEAD
           // 'https://dev8.sidat.digital' + "/api/slider/user-dashboard"
           'https://dev8.sidat.digital' + "/api/slider/talent-competition"
+=======
+          // "https://dev8.sidat.digital" + "/api/slider/user-dashboard"
+          "https://dev8.sidat.digital" + "/api/slider/talent-competition"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         )
         .then((response) => {
           // console.log("data checking", response.data);

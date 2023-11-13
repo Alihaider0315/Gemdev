@@ -73,7 +73,11 @@ const UserProfile = () => {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {
@@ -96,7 +100,11 @@ const UserProfile = () => {
     axios
       .get(
         // `${baseUrl}/api/member/user_profile`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/member/user_profile",
+=======
+        "https://dev8.sidat.digital" + "/api/member/user_profile",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         {
           headers: {
             Authorization:

@@ -14,7 +14,11 @@ export default function NewsLetter() {
     axios
       .post(
         // `${baseUrl}/api/subscribers`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/subscribers",
+=======
+        "https://dev8.sidat.digital" + "/api/subscribers",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         { email: email }
       )
       .then((response) => {

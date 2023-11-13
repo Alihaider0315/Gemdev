@@ -20,7 +20,11 @@ export default function MasterClass({ formattedDate }) {
   const getMasterClass = async () => {
     try {
       const response = await axios.get(
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/master-class"
+=======
+        "https://dev8.sidat.digital" + "/api/master-class"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       );
       setMasterClass(response?.data?.response?.data || []);
       setMasterLoder(true);
@@ -113,11 +117,11 @@ export default function MasterClass({ formattedDate }) {
                               }}
                             />
                           </div>
-                          {/* <div className={styles.date}>
+                          <div className={styles.date}>
                             <span className="yellow">
                               {moment(item.created_at).format("MMMM DD, YYYY")}
                             </span>
-                          </div> */}
+                          </div>
                         </div>
                       </Link>
                     </SwiperSlide>

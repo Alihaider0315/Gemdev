@@ -81,7 +81,11 @@ export default function Projects() {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {
@@ -105,7 +109,11 @@ export default function Projects() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=Overview&s[type]=Landing`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=Projects&s[type]=Landing"
         )
         .then((response) => {
@@ -125,7 +133,11 @@ export default function Projects() {
       await axios
         .get(
           // `${baseUrl}/api/projects`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/projects"
+=======
+          "https://dev8.sidat.digital" + "/api/projects"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         )
         .then((response) => {
           setProjects(response?.data?.response?.data);
@@ -143,7 +155,11 @@ export default function Projects() {
       await axios
         .get(
           // `${baseUrl}/api/ajax/project_categories`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/ajax/project_categories"
+=======
+          "https://dev8.sidat.digital" + "/api/ajax/project_categories"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         )
         .then((response) => {
           setProjectCategories(response?.data);

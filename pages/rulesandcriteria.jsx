@@ -73,7 +73,11 @@ export default function RulesandCriteria() {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {
@@ -97,7 +101,11 @@ export default function RulesandCriteria() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=talenthunt/rules and criteria&s[type]=Landing`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=Rules & Criteria&s[type]=Landing"
         )
 

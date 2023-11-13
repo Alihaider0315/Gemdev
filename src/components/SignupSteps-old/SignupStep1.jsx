@@ -62,7 +62,11 @@ export default function SignupStep1({
       await axios
         .post(
           // `${baseUrl}/api/check-user`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/check-user",
+=======
+          "https://dev8.sidat.digital" + "/api/check-user",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           {
             email: step1Values?.email,
           }

@@ -27,7 +27,11 @@ export default function Ent() {
   const GetBanner = async () => {
     try {
       await axios
+<<<<<<< HEAD
         .get('https://dev8.sidat.digital' + "/api/landing_page")
+=======
+        .get("https://dev8.sidat.digital" + "/api/landing_page")
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         .then((response) => {
           setBanner(response.data);
           setSliderSection(response?.data?.slider_section);

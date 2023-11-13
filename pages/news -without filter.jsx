@@ -40,7 +40,11 @@ export default function News() {
     try {
       const response = await axios.get(
         // `${baseUrl}/api/news?page=${currentPage}`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/news?page=" + currentPage
+=======
+        "https://dev8.sidat.digital" + "/api/news?page=" + currentPage
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       );
       setNews((prevNews) => [...prevNews, ...response.data?.response?.data]);
       setPerPage(response.data.response.per_page);
@@ -118,7 +122,11 @@ export default function News() {
     try {
       await axios
         .get(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=News&s[type]=Landing"
         )
         .then((response) => {
@@ -151,7 +159,11 @@ export default function News() {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {

@@ -83,7 +83,11 @@ export default function Dashboard() {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {
@@ -108,7 +112,11 @@ export default function Dashboard() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=Benefits&s[type]=Landing`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=Competition Entry&s[type]=Landing"
         )
         .then((response) => {
@@ -143,7 +151,11 @@ export default function Dashboard() {
     axios
       .get(
         // `${baseUrl}/api/competitions`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/competitions",
+=======
+        "https://dev8.sidat.digital" + "/api/competitions",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
 
         {
           headers: {
@@ -170,7 +182,11 @@ export default function Dashboard() {
     axios
       .get(
         // `${baseUrl}/api/member/registered-competitions?competition_id=${1}`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' +
+=======
+        "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           // "/api/member/registered-competitions?competition_id=" +
           // 1,
           "/api/member/registered-competitions",
@@ -195,7 +211,11 @@ export default function Dashboard() {
     axios
       .get(
         // `${baseUrl}/api/member/user-competition/delete?user_competition_id=${id}`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' +
+=======
+        "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           "/api/member/user-competition/delete?user_competition_id=" +
           id,
 
@@ -487,7 +507,11 @@ export default function Dashboard() {
 export async function getServerSideProps() {
   const res2 = await axios.get(
     // `${baseUrl}/api/competitions`
+<<<<<<< HEAD
     'https://dev8.sidat.digital' + "/api/competitions"
+=======
+    "https://dev8.sidat.digital" + "/api/competitions"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
   );
   const data2 = res2?.data?.response?.data.filter(
     (obj) => obj.status === "Active"

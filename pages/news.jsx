@@ -47,7 +47,11 @@ export default function News() {
     try {
       const response = await axios.get(
         // `${baseUrl}/api/news?page=${currentPage}`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/news?page=" + page
+=======
+        "https://dev8.sidat.digital" + "/api/news?page=" + page
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       );
       return response.data.response.data; // Return events data
     } catch (error) {
@@ -104,7 +108,11 @@ export default function News() {
   const GetNewsCategoreis = async () => {
     try {
       await axios
+<<<<<<< HEAD
         .get('https://dev8.sidat.digital' + "/api/ajax/news_categories")
+=======
+        .get("https://dev8.sidat.digital" + "/api/ajax/news_categories")
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         .then((response) => {
           setNewsCategories(response.data);
           setNewsCategoriesLoader(true);
@@ -122,7 +130,11 @@ export default function News() {
       axios
         .get(
           // `${baseUrl}/api/events?category_id=${catID}&q=`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/news?category_id=" +
             catID +
             "&q="
@@ -214,7 +226,11 @@ export default function News() {
     try {
       await axios
         .get(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=News&s[type]=Landing"
         )
         .then((response) => {
@@ -247,7 +263,11 @@ export default function News() {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {

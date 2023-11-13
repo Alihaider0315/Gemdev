@@ -20,7 +20,11 @@ export default function AddBaner({ page }) {
       await axios
         .get(
           // `${baseUrl}/api/advertisements?page=${encodeURIComponent(page)}`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/advertisements?page=" +
             encodeURIComponent(page)
         )

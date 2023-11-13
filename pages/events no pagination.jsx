@@ -83,7 +83,11 @@ export default function Events() {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {
@@ -109,7 +113,11 @@ export default function Events() {
     try {
       await axios
         .get(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=Events&s[type]=Landing"
         )
         .then((response) => {
@@ -128,7 +136,11 @@ export default function Events() {
     try {
       await axios
         .get(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/events?page=" + currentPage
+=======
+          "https://dev8.sidat.digital" + "/api/events?page=" + currentPage
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         )
         .then((response) => {
           setEvents(response.data.response.data);
@@ -146,7 +158,11 @@ export default function Events() {
   const GetEventCategoreis = async () => {
     try {
       await axios
+<<<<<<< HEAD
         .get('https://dev8.sidat.digital' + "/api/ajax/event_categories")
+=======
+        .get("https://dev8.sidat.digital" + "/api/ajax/event_categories")
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         .then((response) => {
           setEventCategories(response.data);
           setEventCategoriesLoader(true);
@@ -165,7 +181,11 @@ export default function Events() {
       axios
         .get(
           // `${baseUrl}/api/events?category_id=${catID}&q=`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/events?category_id=" +
             catID +
             "&q="

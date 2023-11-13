@@ -71,7 +71,11 @@ export default function Invest() {
           date_time: localDateTime,
         };
         const response = await axios.post(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' + "/api/member/add-user-activity",
+=======
+          "https://dev8.sidat.digital" + "/api/member/add-user-activity",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           requestBody,
           {
             headers: {
@@ -94,7 +98,11 @@ export default function Invest() {
     try {
       await axios
         .get(
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=invest&s[type]=Landing"
         )
         .then((response) => {
@@ -112,7 +120,11 @@ export default function Invest() {
   const GetContent = async () => {
     try {
       await axios
+<<<<<<< HEAD
         .get('https://dev8.sidat.digital' + "/api/page/invest")
+=======
+        .get("https://dev8.sidat.digital" + "/api/page/invest")
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         .then((response) => {
           setContent(response?.data?.response);
           setContentLoader(true);

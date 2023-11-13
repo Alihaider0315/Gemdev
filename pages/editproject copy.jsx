@@ -88,7 +88,11 @@ export default function EditProject() {
       await axios
         .get(
           // `${baseUrl}/api/banners?s[page]=invest&s[type]=Landing`
+<<<<<<< HEAD
           'https://dev8.sidat.digital' +
+=======
+          "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
             "/api/banners?s[page]=Edit Project&s[type]=Landing"
         )
         .then((response) => {
@@ -353,7 +357,11 @@ export default function EditProject() {
     await axios
       .post(
         // `${baseUrl}/api/member/user-competition/update`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' +
+=======
+        "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           "/api/member/user-competition/update",
 
         updatedProject,
@@ -396,7 +404,11 @@ export default function EditProject() {
   //   await axios
   //     .get(
   //       // `${baseUrl}/api/member/user-competition-file/delete?file_id=${fileID}`
+<<<<<<< HEAD
   //       'https://dev8.sidat.digital' +
+=======
+  //       "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
   //         "/api/member/user-competition-file/delete?file_id=" +
   //         fileID,
 
@@ -429,7 +441,11 @@ export default function EditProject() {
   const deleteCompetetionFile = async (fileID) => {
     try {
       await axios.get(
+<<<<<<< HEAD
         'https://dev8.sidat.digital' +
+=======
+        "https://dev8.sidat.digital" +
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
           "/api/member/user-competition-file/delete?file_id=" +
           fileID,
 

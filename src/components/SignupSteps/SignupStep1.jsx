@@ -45,12 +45,6 @@ const SignupStep1 = ({}) => {
       setCode(code);
     }
   }, [router.query]);
-
-  useEffect(() => {
-    if (code) {
-      setPromoCode(code);
-    }
-  }, [code]);
   // useEffect(() => {}, [myValue]);
 
   const dispatch = useDispatch();
@@ -162,7 +156,11 @@ const SignupStep1 = ({}) => {
     axios
       .get(
         // `${baseUrl}/api/ajax/countries`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/ajax/countries"
+=======
+        "https://dev8.sidat.digital" + "/api/ajax/countries"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       )
       .then((response) => {
         // handle the response here
@@ -178,7 +176,11 @@ const SignupStep1 = ({}) => {
     axios
       .get(
         // `${baseUrl}/api/ajax/cities/${country}`
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/ajax/cities/" + country
+=======
+        "https://dev8.sidat.digital" + "/api/ajax/cities/" + country
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       )
       .then((response) => {
         // Sort the response data before setting it in cityList state
@@ -256,7 +258,11 @@ const SignupStep1 = ({}) => {
     // axios
     //   .post(
     //     // "https://a.iamgemglobal.com/api/check-user"
+<<<<<<< HEAD
     //     'https://dev8.sidat.digital' + "/api/check-user-phone",
+=======
+    //     "https://dev8.sidat.digital" + "/api/check-user-phone",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
     //     {
     //       phone: phone,
     //     }
@@ -275,7 +281,11 @@ const SignupStep1 = ({}) => {
     // axios
     //   .post(
     //     // "https://a.iamgemglobal.com/api/check-user"
+<<<<<<< HEAD
     //     'https://dev8.sidat.digital' + "/api/check-user",
+=======
+    //     "https://dev8.sidat.digital" + "/api/check-user",
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
     //     {
     //       email: email,
     //     }
@@ -292,10 +302,17 @@ const SignupStep1 = ({}) => {
     //   });
 
     Promise.all([
+<<<<<<< HEAD
       axios.post('https://dev8.sidat.digital' + "/api/check-user-phone", {
         phone: phone,
       }),
       axios.post('https://dev8.sidat.digital' + "/api/check-user", {
+=======
+      axios.post("https://dev8.sidat.digital" + "/api/check-user-phone", {
+        phone: phone,
+      }),
+      axios.post("https://dev8.sidat.digital" + "/api/check-user", {
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
         email: email,
       }),
     ])
@@ -549,7 +566,6 @@ const SignupStep1 = ({}) => {
                     name="promo_code"
                     value={promo_code}
                     onChange={(e) => setPromoCode(e.target.value)}
-                    disabled={code ? true : false} // Disable the input field if the code has a value
                   />
                 </label>
 

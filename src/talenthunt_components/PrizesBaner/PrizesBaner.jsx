@@ -31,7 +31,11 @@ export default function PrizesAndWinners() {
   const GetPrize = async () => {
     try {
       const response = await axios.get(
+<<<<<<< HEAD
         'https://dev8.sidat.digital' + "/api/competition-prizes"
+=======
+        "https://dev8.sidat.digital" + "/api/competition-prizes"
+>>>>>>> 3fba07fa54c805194e2e6506440e5014cf4c33b6
       );
       // console.log(response?.data?.response?.data, "chrcking");
 
