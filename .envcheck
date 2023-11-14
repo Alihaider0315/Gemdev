@@ -1,4 +1,4 @@
-https://dev8.sidat.digital="https://a.iamgemglobal.com"
+NEXT_PUBLIC_BASE_URL="https://a.iamgemglobal.com"
 NEXT_PUBLIC_SIGN_UP="https://a.iamgemglobal.com/api/member/registration"
 NEXT_PUBLIC_Social_Auth_Register="https://a.iamgemglobal.com/api/member/social-auth"
 NEXT_PUBLIC_OTP_VERIFICATION="https://a.iamgemglobal.com/api/member/verify-opt"
